@@ -1,0 +1,36 @@
+/* Write your CSS code here. */
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #ffeeee, #ffebeb, #ffc0bb);
+}
+.feedbackcontainer {
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-size: 20px;
+}
+.emojiscontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.emojicontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.image {
+  width: 25px;
+  height: auto;
+}
+.emojipara {
+  font-size: 10px;
+}
