@@ -9,13 +9,12 @@ class Feedback extends Component {
     this.setState(prevState => ({isClicked: !prevState.isClicked}))
   }
 
-  render() {
+  display = () => {
     const {isClicked} = this.state
     const {resources} = this.props
     const {emojis, loveEmojiUrl} = resources
-    let display
-    if (isClicked) {
-      display = (
+    if (isClicked === true) {
+      return (
         <div className="feedbackcontainer">
           <h1 className="heading">
             How satisfied are you with our customer support perfomance?
@@ -23,7 +22,7 @@ class Feedback extends Component {
           <div className="emojiscontainer">
             <div className="emojicontainer">
               <button type="button" id="label" onClick={this.onChange}>
-                <img src={emojis[0].imageUrl} className="image" />
+                <img src={emojis[0].imageUrl} alt="Sad" className="image" />
               </button>
               <label htmlFor="labell" className="emojipara">
                 {emojis[0].name}
@@ -31,7 +30,7 @@ class Feedback extends Component {
             </div>
             <div className="emojicontainer">
               <button type="button" id="label" onClick={this.onChange}>
-                <img src={emojis[1].imageUrl} className="image" />
+                <img src={emojis[1].imageUrl} alt="None" className="image" />
               </button>
               <label htmlFor="labell" className="emojipara">
                 {emojis[1].name}
@@ -39,7 +38,7 @@ class Feedback extends Component {
             </div>
             <div className="emojicontainer">
               <button type="button" id="label" onClick={this.onChange}>
-                <img src={emojis[2].imageUrl} className="image" />
+                <img src={emojis[2].imageUrl} alt="Happy" className="image" />
               </button>
               <label htmlFor="labell" className="emojipara">
                 {emojis[2].name}
@@ -49,7 +48,7 @@ class Feedback extends Component {
         </div>
       )
     }
-    display = (
+    return (
       <div className="thankyoucontainer">
         <img src={loveEmojiUrl} className="love" />
         <p className="para1">Thank You!</p>
@@ -58,8 +57,12 @@ class Feedback extends Component {
         </p>
       </div>
     )
+  }
 
-    return <div className="maincontainer">{display}</div>
+  render() {
+    const {isClicked} = this.state
+
+    return <div className="maincontainer">{this.display()}</div>
   }
 }
 
