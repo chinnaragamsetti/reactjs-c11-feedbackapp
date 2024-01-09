@@ -22,7 +22,11 @@ class Feedback extends Component {
           <div className="emojiscontainer">
             <div className="emojicontainer">
               <button type="button" id="label" onClick={this.onChange}>
+<<<<<<< HEAD
                 <img src={emojis[0].imageUrl} alt="name" className="image" />
+=======
+                <img src={emojis[0].imageUrl} alt="Sad" className="image" />
+>>>>>>> d3580f69b19542392f63b7d3b73c706098961386
               </button>
               <label htmlFor="labell" className="emojipara">
                 {emojis[0].name}
@@ -30,7 +34,11 @@ class Feedback extends Component {
             </div>
             <div className="emojicontainer">
               <button type="button" id="label" onClick={this.onChange}>
+<<<<<<< HEAD
                 <img src={emojis[1].imageUrl} alt="name" className="image" />
+=======
+                <img src={emojis[1].imageUrl} alt="None" className="image" />
+>>>>>>> d3580f69b19542392f63b7d3b73c706098961386
               </button>
               <label htmlFor="labell" className="emojipara">
                 {emojis[1].name}
@@ -38,7 +46,11 @@ class Feedback extends Component {
             </div>
             <div className="emojicontainer">
               <button type="button" id="label" onClick={this.onChange}>
+<<<<<<< HEAD
                 <img src={emojis[2].imageUrl} alt="name" className="image" />
+=======
+                <img src={emojis[2].imageUrl} alt="Happy" className="image" />
+>>>>>>> d3580f69b19542392f63b7d3b73c706098961386
               </button>
               <label htmlFor="labell" className="emojipara">
                 {emojis[2].name}
