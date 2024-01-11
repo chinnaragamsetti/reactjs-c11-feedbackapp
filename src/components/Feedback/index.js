@@ -21,7 +21,7 @@ class Feedback extends Component {
             How satisfied are you with our customer support performance
           </h1>
           <ul className="emojiscontainer">
-            {resources.map(each => (
+            {resources.emojis.map(each => (
               <li key={each.id} className="emojicontainer">
                 <button type="button" id="label" onClick={this.onChange}>
                   <img src={each.imageUrl} alt="name" className="image" />
