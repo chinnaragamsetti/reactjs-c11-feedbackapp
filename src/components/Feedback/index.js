@@ -13,7 +13,6 @@ class Feedback extends Component {
     const {isClicked} = this.state
     const {resources} = this.props
     const {emojis, loveEmojiUrl} = resources
-    const {id, name, imageUrl} = emojis
     if (isClicked === true) {
       return (
         <div className="feedbackcontainer">
@@ -26,7 +25,7 @@ class Feedback extends Component {
                 <button type="button" id="label" onClick={this.onChange}>
                   <img src={each.imageUrl} alt={each.name} className="image" />
                 </button>
-                <label htmlFor="labell" className="emojipara">
+                <label htmlFor="label" className="emojipara">
                   {each.name}
                 </label>
               </li>
