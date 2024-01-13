@@ -24,7 +24,7 @@ class Feedback extends Component {
             {resources.emojis.map(each => (
               <li key={each.id} className="emojicontainer">
                 <button type="button" id="label" onClick={this.onChange}>
-                  <img src={each.imageUrl} alt="name" className="image" />
+                  <img src={each.imageUrl} alt={each.name} className="image" />
                 </button>
                 <label htmlFor="labell" className="emojipara">
                   {each.name}
@@ -38,7 +38,7 @@ class Feedback extends Component {
     return (
       <div className="thankyoucontainer">
         <img src={loveEmojiUrl} alt="love emoji" className="love" />
-        <h1 className="para1">Thank You!</h1>
+        <h1 className="para1">Thank You</h1>
         <p className="para2">
           We will use your feedback to improve our customer support perfomance
         </p>
@@ -47,8 +47,6 @@ class Feedback extends Component {
   }
 
   render() {
-    const {isClicked} = this.state
-
     return <div className="maincontainer">{this.display()}</div>
   }
 }
